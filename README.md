@@ -6,7 +6,7 @@ To start live server
 
 To build the project
 
-    yarn run build
+    yarn build
 
 To run the test files
 
