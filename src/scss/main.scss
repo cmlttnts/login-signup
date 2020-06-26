@@ -1,7 +1,117 @@
+@use './vars' as vars;
+
+*,
+::after,
+::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 1rem;
+}
+
+html {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+html,
 body {
-  font-size: 10rem;
+  width: 100%;
+  height: 100%;
+}
+
+a,
+a:link,
+a:hover,
+a:visited {
+  text-decoration: none;
+  color: inherit;
+  font-size: inherit;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: vars.$body-bgc;
+}
+
+.login-container,
+.signup-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  padding-top: 5rem;
+  & > * {
+    margin-top: 0.5rem;
+  }
+}
+
+.login-form-container,
+.signup-form-container {
+  border-radius: 20px;
+  width: 80%;
+  max-width: 400px;
+  padding: 1rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  & > * {
+    margin-top: 0.4rem;
+  }
+}
+
+.login-form-container {
+  background-color: vars.$login-bgc;
+}
+
+.signup-form-container {
+  background-color: vars.$signup-bgc;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  font-size: 1.4rem;
+  & > * {
+    width: 100%;
+    margin-top: 0.2rem;
+    border-radius: 4px;
+    font-size: inherit;
+    height: 2rem;
+  }
+}
+
+.password-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  & > * {
+    height: 100%;
+    border-radius: 4px;
+  }
+  img {
+    border: 2px solid darkblue;
+    position: relative;
+    z-index: 1;
+  }
+  input {
+    // border-right: none;
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 700px) {
+  body {
+    flex-direction: row;
+    align-items: flex-start;
+  }
 }

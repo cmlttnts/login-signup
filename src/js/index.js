@@ -1,10 +1,30 @@
 import '../scss/main.scss';
 import '../css/main.css';
 
-function asd() {
+const loginPwdInput = document.getElementById('password-login');
+const loginPwdShow = document.getElementById('password-login-show');
 
-  console.log('hello');
 
-}
+const signupPwdInput = document.getElementById('password-sign');
+const signupPwdShow = document.getElementById('password-sign-show');
 
-asd();
+
+loginPwdShow.addEventListener('mouseenter',
+    () => {
+      loginPwdInput.setAttribute('type', 'text');
+    });
+loginPwdShow.addEventListener('mouseleave',
+    () => {
+      loginPwdInput.setAttribute('type', 'password');
+    });
+
+signupPwdShow.addEventListener('mouseenter',
+    () => {
+      signupPwdInput.setAttribute('type', 'text');
+    });
+signupPwdShow.addEventListener('mouseleave',
+    () => {
+      signupPwdInput.setAttribute('type', 'password');
+    });
+
+

@@ -6,7 +6,7 @@
     "import/no-extraneous-dependencies": "off",
     "require-jsdoc":"warn",
     "max-len": ["warn", {"code": 110}],
-    "padded-blocks": ["warn", "always"]
+    "padded-blocks":"off"
   },
   "parserOptions": {
     "ecmaVersion": 2020,

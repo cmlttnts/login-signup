@@ -6,6 +6,42 @@
     <title>My App</title>
   </head>
   <body>
-    <h1>HELLO WORLD</h1>
+    <div class="login-container">
+      <h1>Login</h1>
+      <div class="login-form-container">
+        <form class="login-form">
+          <label for="email">Email:</label>
+          <input type="email" name="email" id="email" required />
+          <label for="password-login">Password:</label>
+          <div class="password-container">
+            <input type="password" name="password" id="password-login" required />
+            <img src="./assets/see-password32x32.png" alt="see password" id="password-login-show" />
+          </div>
+          <button class="login-button" type="submit">Login</button>
+        </form>
+        <a href="#!">I forgot my password</a>
+        <a href="#!">I don't have an account</a>
+      </div>
+    </div>
+    <div class="signup-container">
+      <h2>Sign Up</h2>
+      <div class="progress-bar"></div>
+      <div class="signup-form-container">
+        <form class="signup-form">
+          <label for="name">First Name:</label>
+          <input type="text" name="name" id="name" required />
+          <label for="surname">Surname:</label>
+          <input type="text" name="surname" id="surname" required />
+          <label for="email-sign">Email:</label>
+          <input type="email" name="email" id="email-sign" required />
+          <label for="password-sign">Password:</label>
+          <div class="password-container">
+            <input type="password" name="password" id="password-sign" required />
+            <img src="./assets/see-password32x32.png" alt="see password" id="password-sign-show" />
+          </div>
+          <button class="login-button" type="submit">Login</button>
+        </form>
+      </div>
+    </div>
   </body>
 </html>

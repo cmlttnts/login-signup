@@ -1,4 +1,7 @@
-# TEMPLATE PROJECT SETUP WITH WEBPACK CONFIGURED
+# Basic Login and Sign Up Pages
+
+Live @ https://cmlttnts.github.io/login-signup/
+
 
 To start a live server
 
