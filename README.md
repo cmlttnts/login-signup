@@ -1,6 +1,6 @@
 # TEMPLATE PROJECT SETUP WITH WEBPACK CONFIGURED
 
-To start live server
+To start a live server
 
     yarn start
 
