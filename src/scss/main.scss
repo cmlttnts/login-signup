@@ -24,9 +24,15 @@ a,
 a:link,
 a:hover,
 a:visited {
-  text-decoration: none;
-  color: inherit;
+  color: blue;
   font-size: inherit;
+  border-radius: 5px;
+  padding: 0.2rem;
+  text-decoration: underline;
+}
+
+button {
+  cursor: pointer;
 }
 
 body {
@@ -46,7 +52,7 @@ body {
   width: 100%;
   padding-top: 5rem;
   & > * {
-    margin-top: 0.5rem;
+    margin-top: 1.5rem;
   }
 }
 
@@ -62,7 +68,7 @@ body {
   justify-content: center;
   align-items: center;
   & > * {
-    margin-top: 0.4rem;
+    margin-top: 1rem;
   }
 }
 
@@ -84,7 +90,20 @@ body {
 }
 
 form {
+  width: 80%;
+  button {
+    margin-top: 0.5rem;
+    width: 50%;
+    background-color: rgb(81, 132, 228);
+    color: white;
+    outline: none;
+    border-radius: 6px;
+  }
+}
+
+.login-form {
   display: flex;
+  border: 1px solid violet;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
@@ -96,14 +115,30 @@ form {
     font-size: inherit;
     height: 2rem;
   }
-
   button {
-    margin-top: 0.5rem;
     width: 50%;
-    background-color: rgb(81, 132, 228);
-    color: white;
-    outline: none;
+    margin-top: 1rem;
+  }
+}
+
+.signup-form {
+  border: 1px solid violet;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  font-size: 1.4rem;
+  & > div {
+    width: 100%;
+    font-size: inherit;
+    border: 1px solid red;
+  }
+  & > div > * {
+    width: 100%;
+    margin-top: 0.2rem;
     border-radius: 6px;
+    font-size: inherit;
+    height: 2rem;
   }
 }
 
@@ -112,14 +147,19 @@ form {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  font-size: inherit;
+  font-size: 1.4rem;
 
   button {
     font-size: inherit;
   }
 
+  button:first-child {
+    margin-right: 1rem;
+  }
   button:disabled {
     background-color: rgba(81, 132, 228, 0.5);
+    text-decoration: line-through;
+    cursor: not-allowed;
   }
 }
 
@@ -137,6 +177,7 @@ form {
     border: 2px solid darkblue;
     position: relative;
     z-index: 1;
+    cursor: progress;
   }
   input {
     // border-right: none;
@@ -149,8 +190,7 @@ form {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-
-  margin: 1rem auto;
+  cursor: progress;
   height: 10px;
   background-color: white;
   width: 50%;
@@ -173,7 +213,7 @@ form {
 
 .first-step {
   .progress-bar > span:first-child {
-    background-color: rgb(171, 255, 46);
+    background-color: vars.$progress-col;
   }
 }
 
@@ -181,23 +221,23 @@ form {
   .progress-bar {
     background: linear-gradient(
       to right,
-      rgb(171, 255, 46),
-      rgb(171, 255, 46) 50%,
+      vars.$progress-col,
+      vars.$progress-col 50%,
       white 50%,
       white 100%
     );
     & > span:nth-child(-n + 2) {
-      background-color: rgb(171, 255, 46);
+      background-color: vars.$progress-col;
     }
   }
 }
 
 .final-step {
   .progress-bar {
-    background-color: rgb(171, 255, 46);
+    background-color: vars.$progress-col;
 
     & > span {
-      background-color: rgb(171, 255, 46);
+      background-color: vars.$progress-col;
     }
   }
 }
