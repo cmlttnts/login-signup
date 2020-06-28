@@ -17,21 +17,18 @@
   signUpB.addEventListener('click',
       (e) => {
         e.preventDefault();
-        console.log('Send the form');
       });
 
   const backB = document.querySelector('.backB');
   backB.addEventListener('click',
       (e) => {
         if (currentStep > 1) currentStep--;
-        console.log('Go Back 1 Page', currentStep);
         makePage(currentStep);
       });
   const forwB = document.querySelector('.forwB');
   forwB.addEventListener('click',
       (e) => {
         if (currentStep < NUM_OF_STEPS) currentStep++;
-        console.log('Go Forward 1 Page', currentStep);
         makePage(currentStep);
       });
 
