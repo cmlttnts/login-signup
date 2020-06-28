@@ -103,7 +103,6 @@ form {
 
 .login-form {
   display: flex;
-  border: 1px solid violet;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
@@ -122,7 +121,6 @@ form {
 }
 
 .signup-form {
-  border: 1px solid violet;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -131,7 +129,6 @@ form {
   & > div {
     width: 100%;
     font-size: inherit;
-    border: 1px solid red;
   }
   & > div > * {
     width: 100%;
@@ -186,7 +183,6 @@ form {
 }
 
 .progress-bar {
-  border: 1px solid blue;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -198,7 +194,7 @@ form {
   max-width: 400px;
   height: 60px;
   div {
-    border: 1px solid red;
+    border: 1px solid grey;
   }
 
   .step {

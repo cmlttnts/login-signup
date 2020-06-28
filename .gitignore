@@ -2,3 +2,4 @@ node_modules
 dist
 dev
 build
+gh_page_build.sh
