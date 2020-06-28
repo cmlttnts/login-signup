@@ -26,9 +26,11 @@
     <div class="signup-container first-step">
       <h2>Sign Up</h2>
       <div class="progress-bar">
-        <span><span>1</span></span
-        ><span><span>2</span></span
-        ><span><span>3</span></span>
+        <div class="step1 step active">1</div>
+        <div class="progress-line step2"></div>
+        <div class="step2 step">2</div>
+        <div class="progress-line step3"></div>
+        <div class="step3 step">3</div>
       </div>
       <div class="signup-form-container">
         <form class="signup-form">
@@ -39,10 +41,6 @@
             <input type="text" name="surname" id="surname" required />
             <label for="email-sign">Email:</label>
             <input type="email" name="email" id="email-sign" required />
-            <div class="buttons-container">
-              <button class="cta-button" type="button" disabled>Back</button>
-              <button class="cta-button" type="button">Next</button>
-            </div>
           </div>
           <div class="signup-page2">
             <label for="password-sign">Password:</label>
@@ -63,6 +61,17 @@
                 id="password-sign-confirm-show"
               />
             </div>
+          </div>
+          <div class="signup-page3">
+            <label for="country">Country</label>
+            <input type="text" name="country" id="country" />
+            <label for="city">City</label>
+            <input type="text" name="city" id="city" />
+          </div>
+          <div class="buttons-container">
+            <button class="cta-button backB" type="button" disabled>Back</button>
+            <button class="cta-button forwB" type="button">Next</button>
+            <button class="cta-button submitB" type="submit" disabled>Sign Up</button>
           </div>
         </form>
       </div>

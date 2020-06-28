@@ -145,7 +145,7 @@ form {
 .buttons-container {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   font-size: 1.4rem;
 
@@ -153,9 +153,9 @@ form {
     font-size: inherit;
   }
 
-  button:first-child {
-    margin-right: 1rem;
-  }
+  // button:first-child {
+  //   margin-right: 1rem;
+  // }
   button:disabled {
     background-color: rgba(81, 132, 228, 0.5);
     text-decoration: line-through;
@@ -186,60 +186,60 @@ form {
 }
 
 .progress-bar {
+  border: 1px solid blue;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   cursor: progress;
-  height: 10px;
-  background-color: white;
-  width: 50%;
+  position: relative;
+  counter-reset: steps;
+  width: 80%;
+  max-width: 400px;
+  height: 60px;
+  div {
+    border: 1px solid red;
+  }
 
-  & > span {
-    display: inline-block;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    border: 1px solid grey;
-    background-color: white;
+  .step {
+    width: vars.$step-dia;
+    line-height: vars.$step-dia;
+    height: vars.$step-dia;
+    border-radius: 100%;
     text-align: center;
-    padding: 0.2rem;
-    span {
-      margin: 0 auto;
-      font-size: 1.5rem;
-    }
+  }
+  .step:first-child {
+    position: relative;
+    right: vars.$step-dia / 2;
+  }
+  .step:last-child {
+    position: relative;
+    left: vars.$step-dia / 2;
+  }
+  .progress-line {
+    width: 30%;
+    position: relative;
+  }
+  .progress-line:nth-child(2) {
+    right: vars.$step-dia / 4;
+  }
+  .progress-line:nth-child(4) {
+    left: vars.$step-dia / 4;
+  }
+
+  .step.active,
+  .progress-line.active {
+    background-color: greenyellow;
+    border: 1px solid greenyellow;
   }
 }
-
 .first-step {
-  .progress-bar > span:first-child {
-    background-color: vars.$progress-col;
-  }
 }
 
 .second-step {
-  .progress-bar {
-    background: linear-gradient(
-      to right,
-      vars.$progress-col,
-      vars.$progress-col 50%,
-      white 50%,
-      white 100%
-    );
-    & > span:nth-child(-n + 2) {
-      background-color: vars.$progress-col;
-    }
-  }
 }
 
 .final-step {
-  .progress-bar {
-    background-color: vars.$progress-col;
-
-    & > span {
-      background-color: vars.$progress-col;
-    }
-  }
 }
 
 @media only screen and (min-width: 700px) {

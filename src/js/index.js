@@ -2,6 +2,7 @@ import '../scss/main.scss';
 import '../css/main.css';
 import './Login';
 import './SingUp';
+import './SignUpProgress';
 
 
 const buttons = document.getElementsByTagName('button');
